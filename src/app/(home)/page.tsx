@@ -1,6 +1,4 @@
-import { UserDTO } from '@/users/infrastructure/dto/user'
-import UserCard from '@/users/presentation/UserCard'
-
+import { Suspense } from 'react'
 import * as usersRepository from '@/app/_users/infrastructure/usersRepository'
 import { DataTable } from '@/app/_users/presentation/DataTable'
 import { columns } from '@/app/_users/presentation/Columns'
@@ -15,8 +13,6 @@ export default async function Home() {
     </section>
   )
 }
-
-import React, { Suspense } from 'react'
 
 async function UsersTable() {
   const users = await usersRepository.listUsers()
