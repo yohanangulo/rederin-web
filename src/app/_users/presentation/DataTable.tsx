@@ -39,7 +39,7 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
   })
 
   return (
-    <div>
+    <>
       <div className="flex items-center py-4">
         <Input
           placeholder="Filtrar por usuario"
@@ -85,6 +85,6 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
           </TableBody>
         </Table>
       </div>
-    </div>
+    </>
   )
 }
