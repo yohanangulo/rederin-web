@@ -25,3 +25,5 @@ async function UsersTable() {
     </div>
   )
 }
+
+export const dynamic = 'force-dynamic'
