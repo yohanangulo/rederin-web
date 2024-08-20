@@ -1,10 +1,11 @@
 import { UserDTO } from '@/users/infrastructure/dto/user'
 import { User } from '../domain/user'
+import axios from 'axios'
 
 export async function listUsers() {
-  const response = await fetch('https://rederin-api.vercel.app/api/users')
+  const { data: users } = await axios.get<User[]>('https://rederin-api.vercel.app/api/users')
 
-  const users = (await response.json()) as User[]
+  console.log(users.at(-1))
 
   return users
 }
